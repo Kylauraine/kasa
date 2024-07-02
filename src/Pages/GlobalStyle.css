@@ -1,0 +1,8 @@
+.global-page {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=GlobalStyle.css.map */

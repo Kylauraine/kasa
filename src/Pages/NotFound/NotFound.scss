@@ -1,0 +1,38 @@
+$orange: #ff6060;
+
+.Not-found {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 250px;
+    color: $orange;
+
+    @media (max-width: 768px) {
+      font-size: 96px;
+    }
+  }
+
+  &__message {
+    font-size: 36px;
+    color: $orange;
+    font-weight: 500;
+    padding-bottom: 30px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+  }
+}

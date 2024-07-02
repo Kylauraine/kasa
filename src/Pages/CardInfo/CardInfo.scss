@@ -1,0 +1,62 @@
+$orange: #ff6060;
+
+.CardInfo {
+  font-weight: 500;
+  margin-bottom: 10px;
+
+  &__title {
+    font-size: 36px;
+    color: $orange;
+  }
+
+  &__location {
+    font-size: 18px;
+    color: #000;
+  }
+}
+
+.collapse-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.collapse-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .collapse-wrapper {
+    flex-direction: column;
+  }
+
+  .collapse-column {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.introduction-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .CardInfo {
+    font-weight: 500;
+    margin-bottom: 10px;
+
+    &__title {
+      font-size: 18px;
+      color: $orange;
+    }
+
+    &__location {
+      font-size: 18px;
+      color: #000;
+    }
+  }
+}

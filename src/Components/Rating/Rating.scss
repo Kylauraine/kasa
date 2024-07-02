@@ -1,0 +1,25 @@
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.star {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+.red {
+  color: #ff6060;
+}
+
+.gray {
+  color: #e3e3e3;
+}
+
+@media (max-width: 768px) {
+  .star {
+    font-size: 1em;
+    padding: 0 5px;
+  }
+}
