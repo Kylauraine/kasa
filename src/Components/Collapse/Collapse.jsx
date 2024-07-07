@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import "./Collapse.scss";
 
 const Collapse = ({ title, children }) => {
@@ -13,12 +13,9 @@ const Collapse = ({ title, children }) => {
   return (
     <div className="collapse">
       <button className="collapse-button" onClick={toggleCollapse}>
-        {title}
-        <span className={`arrow ${isOpen ? "down" : "up"}`}>
-          <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleUp} />
-        </span>
+        {title} <FontAwesomeIcon icon={faAngleUp} className={`arrow ${isOpen ? "down" : "up"}`} />
       </button>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div className={`collapse-content ${isOpen ? "open" : ""}`}>{children}</div>
     </div>
   );
 };

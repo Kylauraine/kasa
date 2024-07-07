@@ -19,18 +19,19 @@ const CardDetails = () => {
     <div className="global-page">
       <Header />
       <Slider pictures={card.pictures} />
-      <div className="introduction-wrapper">
-        <div className="CardInfo">
-          <h2 className="CardInfo CardInfo__title">{card.title}</h2>
-          <p className="CardInfo CardInfo__location">{card.location}</p>
+      <div className="All-Infos-Wrapper">
+        <div className="Info-tag-wrapper">
+          <div className="CardInfo">
+            <h2 className="CardInfo CardInfo__title">{card.title}</h2>
+            <p className="CardInfo CardInfo__location">{card.location}</p>
+          </div>
+          <TagList tags={card.tags} />
         </div>
         <div className="host-rating-wrapper">
           <Host name={card.host.name} picture={card.host.picture} />
           <Rating rating={parseInt(card.rating)} />
         </div>
       </div>
-      <TagList tags={card.tags} />
-
       <div className="collapse-wrapper">
         <div className="collapse-column">
           <Collapse title="Description">
