@@ -8,3 +8,9 @@ $orange: #ff6060;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
+
+@media (max-width: 768px) {
+  .global-page {
+    padding: 0 20px;
+  }
+}
