@@ -13,6 +13,12 @@ $orange: #ff6060;
     font-size: 18px;
     color: #000;
   }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 18px;
+    }
+  }
 }
 
 .collapse-wrapper {
@@ -20,19 +26,17 @@ $orange: #ff6060;
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .collapse-column {
   flex: 1;
   margin-right: 20px;
-}
 
-@media (max-width: 768px) {
-  .collapse-wrapper {
-    flex-direction: column;
-  }
-
-  .collapse-column {
+  @media (max-width: 768px) {
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -43,6 +47,10 @@ $orange: #ff6060;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    order: 1; // Place Info-tag-wrapper avant host-rating-wrapper en mode mobile
+  }
 }
 
 .All-Infos-Wrapper {
@@ -51,45 +59,22 @@ $orange: #ff6060;
   align-items: center;
   width: 100%;
   margin-top: 20px;
-}
 
-.host-rating-wrapper {
-  display: column;
-  align-items: center;
-  gap: 10px;
-}
-
-@media (max-width: 768px) {
-  .CardInfo {
-    font-weight: 500;
-    margin-bottom: 10px;
-
-    &__title {
-      font-size: 18px;
-      color: $orange;
-    }
-
-    &__location {
-      font-size: 18px;
-      color: #000;
-    }
-  }
-
-  .All-Infos-Wrapper {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
   }
+}
 
-  .host-rating-wrapper {
-    display: flex;
-    order: 2; /* Place host-rating-wrapper après Info-tag-wrapper en mode mobile */
+.host-rating-wrapper {
+  display: flex; // Corrigé de "display: column" à "display: flex"
+  align-items: center;
+  gap: 10px;
 
-    width: 100%; /* Prend toute la largeur du conteneur */
+  @media (max-width: 768px) {
+    order: 2; // Place host-rating-wrapper après Info-tag-wrapper en mode mobile
+    width: 100%; // Prend toute la largeur du conteneur
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-
-  .Info-tag-wrapper {
-    order: 1; /* Place Info-tag-wrapper avant host-rating-wrapper en mode mobile */
   }
 }
