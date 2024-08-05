@@ -10,10 +10,19 @@ import Collapse from "../../Components/Collapse/Collapse";
 import Host from "../../Components/Host/Host";
 import Rating from "../../Components/Rating/Rating";
 import Footer from "../../Components/Footer/Footer";
+import NotFound from "../NotFound/NotFound";
 
 const CardDetails = () => {
   const { id } = useParams();
   const card = data.find((item) => item.id === id);
+
+  if (!card) {
+    return (
+      <div>
+        <NotFound />
+      </div>
+    );
+  }
 
   return (
     <div className="global-page">

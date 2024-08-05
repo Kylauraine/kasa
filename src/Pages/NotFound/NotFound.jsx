@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
-import "../GlobalStyle.scss";
-import "./NotFound.scss";
+import "../GlobalStyle.scss"; // Vérifiez que ce fichier est correct
+import "./NotFound.scss"; // Vérifiez que ce fichier est correct
 import Footer from "../../Components/Footer/Footer";
 
 const NotFound = () => {

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "./Slider.scss";
 
 const Slider = ({ pictures }) => {
@@ -18,17 +20,17 @@ const Slider = ({ pictures }) => {
 
   return (
     <section className="slider">
-      {current > 0 && (
-        <button className="left-arrow" onClick={prevSlide}>
-          ❮
-        </button>
+      {pictures.length > 1 && (
+        <>
+          <button className="left-arrow" onClick={prevSlide}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
+          <button className="right-arrow" onClick={nextSlide}>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
+        </>
       )}
-      {current < pictures.length - 1 && (
-        <button className="right-arrow" onClick={nextSlide}>
-          ❯
-        </button>
-      )}
-      <div className="slide-number">{`${current + 1}/${pictures.length}`}</div>
+      {pictures.length > 1 && <div className="slide-number">{`${current + 1}/${pictures.length}`}</div>}
       {pictures.map((picture, id) => (
         <div className={id === current ? "slide active" : "slide"} key={id}>
           {id === current && <img src={picture} alt={`slide ${id}`} className="image" />}
